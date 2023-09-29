@@ -3,6 +3,7 @@ backend:
   branch: main
 media_folder: "public/assets/images"
 public_folder: "/assets/images"
+publish_mode: editorial_workflow
 collections: 
 - name: "blog"
   label: "Blog"
@@ -12,8 +13,6 @@ collections:
   create: "true"
   #Filename Template
   slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-  #enable editorial workflow
-  publish_mode: editorial_workflow
   #Content used in the front matter
   fields: 
     - { label: "Title", name: "title", widget: "string"}
