@@ -1,0 +1,27 @@
+backend:
+  name: git-gateway
+  branch: main
+media_folder: "public/assets/images"
+public_folder: "/assets/images"
+collections: 
+- name: "blog"
+  label: "Blog"
+  # Folder you would use where you would make a blog post manually. Blogs is placed in this area because those are the pages we want to make dynamic and editable on the CMS
+  folder: "src/blog"
+  # lets people create blog posts.
+  create: "true"
+  #Filename Template
+  slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+  #Content used in the front matter
+  fields: 
+    - { label: "Title", name: "title", widget: "string"}
+    - { label: "Description", name: "description", widget: "string"}
+    - { label: "Author", name: "author", widget: "string"}
+    - { label: "Date", name: "date", widget: "datetime"}
+    - { label: "Tags", name: "tags", widget: "list, default: ["post"]}
+    - { label: "Featured Image", name: "image", widget: "image"}
+    - { label: "Image caption", name: "imageAlt", widget: "string"}
+    - { label: "Body", name: "body", widget: "markdown"}
+    
+
+    
